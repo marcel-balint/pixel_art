@@ -1,3 +1,5 @@
+let colors = document.querySelectorAll(".color");
+
 createGrid();
 
 function createGrid(val = 16) {
@@ -17,23 +19,23 @@ function createGrid(val = 16) {
       `grid: repeat(${val}, auto) / repeat(${val}, auto)`
     );
   }
-  black();
 }
 
-function black() {
+function paint(color) {
   document.querySelectorAll(".content").forEach(
     content =>
       (content.onmouseover = () => {
-        content.setAttribute("style", `background-color: #000`);
+        content.setAttribute("style", `background-color: ${color}`);
       })
   );
 }
 
-function white() {
-  document.querySelectorAll(".content").forEach(
-    content =>
-      (content.onmouseover = () => {
-        content.setAttribute("style", `background-color: #fff`);
-      })
-  );
-}
+colors.forEach(element => {
+  element.addEventListener("click", e => {
+    if (e.target.className.includes("red")) {
+      paint("#ff0000");
+    } else if (e.target.className.includes("maroon")) {
+      paint("#800000");
+    }
+  });
+});
