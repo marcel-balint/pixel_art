@@ -17,4 +17,14 @@ function createGrid(val = 16) {
       `grid: repeat(${val}, auto) / repeat(${val}, auto)`
     );
   }
+  black();
+}
+
+function black() {
+  document.querySelectorAll(".content").forEach(
+    content =>
+      (content.onmouseover = () => {
+        content.setAttribute("style", `background-color: #000`);
+      })
+  );
 }
