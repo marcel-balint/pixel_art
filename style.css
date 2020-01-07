@@ -44,6 +44,29 @@ span {
   border: 1px solid #000;
 }
 
+button {
+  background-color: #7096a7;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.download {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 .red {
   background-color: #ff0000;
 }

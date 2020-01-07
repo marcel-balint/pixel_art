@@ -22,12 +22,11 @@ function createGrid(val = 16) {
 }
 
 function paint(color) {
-  document.querySelectorAll(".content").forEach(
-    content =>
-      (content.onmouseover = () => {
-        content.setAttribute("style", `background-color: ${color}`);
-      })
-  );
+  document.querySelectorAll(".content").forEach(content => {
+    content.onmouseover = () => {
+      content.setAttribute("style", `background-color: ${color}`);
+    };
+  });
 }
 
 colors.forEach(element => {
