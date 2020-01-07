@@ -17,9 +17,79 @@
   margin-right: auto;
 }
 
+.colors {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, 50px);
+  grid-template-rows: repeat(2, 50px);
+  justify-content: center;
+  margin-bottom: -47px;
+}
+
 h1 {
   font-family: "Signika", sans-serif;
   margin-top: 60px;
   text-align: center;
   color: rgb(13, 216, 214);
+}
+
+span {
+  padding: 22px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.maroon {
+  background-color: #800000;
+}
+
+.green {
+  background-color: #98fb98;
+}
+
+.blue {
+  background-color: #0000ff;
+}
+
+.yellow {
+  background-color: #ffff00;
+}
+
+.orange {
+  background-color: #ffa500;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.black {
+  background-color: #000;
+}
+
+.skin {
+  background-color: #ffe0bd;
+}
+
+.pink {
+  background-color: #ffc0cb;
+}
+
+.crimson {
+  background-color: #dc143c;
+}
+
+.cyan {
+  background-color: #00ffff;
+}
+
+@media (max-width: 672px) {
+  .colors {
+    margin-bottom: 5px;
+  }
 }
