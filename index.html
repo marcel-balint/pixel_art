@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="text/javascript">
+      function downloadImage() {
+        let container = document.querySelector(".box");
+        html2canvas(container, { allowTaint: true }).then(function(canvas) {
+          let link = document.createElement("a");
+          document.body.appendChild(link);
+          link.download = "image.jpg";
+          link.href = canvas.toDataURL();
+          link.target = "_blank";
+          link.click();
+        });
+      }
+    </script>
     <title>Pixel Art</title>
   </head>
   <body>
@@ -26,7 +40,7 @@
       </div>
       <div class="box"></div>
       <div class="download">
-        <button>Download</button>
+        <button onclick="downloadImage();">Download</button>
       </div>
     </div>
     <script src="script.js"></script>
