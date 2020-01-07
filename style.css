@@ -67,6 +67,21 @@ button:focus {
   justify-content: center;
 }
 
+.img-format {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #eee;
+  width: 200px;
+  height: 40px;
+}
+
+select {
+  cursor: pointer;
+}
+
 .red {
   background-color: #ff0000;
 }

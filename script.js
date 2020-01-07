@@ -58,3 +58,15 @@ colors.forEach(element => {
     }
   });
 });
+
+let download = document.querySelector(".image-download");
+
+download.addEventListener("click", () => {
+  let selector = document.getElementById("select");
+  let value = selector[selector.selectedIndex].value;
+  let show = document.querySelector(".img-format");
+  show.style.display = "block";
+  if (value) {
+    downloadImage(value);
+  }
+});

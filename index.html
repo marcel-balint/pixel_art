@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
     <script type="text/javascript">
-      function downloadImage() {
+      function downloadImage(val) {
         let container = document.querySelector(".box");
         html2canvas(container, { allowTaint: true }).then(function(canvas) {
           let link = document.createElement("a");
           document.body.appendChild(link);
-          link.download = "image.jpg";
+          link.download = `image.${val}`;
           link.href = canvas.toDataURL();
           link.target = "_blank";
           link.click();
@@ -40,7 +40,17 @@
       </div>
       <div class="box"></div>
       <div class="download">
-        <button onclick="downloadImage();">Download</button>
+        <p class="img-format">
+          Please choose the format
+          <select id="select">
+            <option value="" selected disabled hidden>Choose here</option>
+            <option value="jpg">JPG</option>
+            <option value="png">PNG</option>
+            <option value="gif">GIF</option>
+          </select>
+        </p>
+
+        <button class="image-download">Download</button>
       </div>
     </div>
     <script src="script.js"></script>
