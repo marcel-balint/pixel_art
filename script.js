@@ -28,3 +28,12 @@ function black() {
       })
   );
 }
+
+function white() {
+  document.querySelectorAll(".content").forEach(
+    content =>
+      (content.onmouseover = () => {
+        content.setAttribute("style", `background-color: #fff`);
+      })
+  );
+}
