@@ -36,6 +36,26 @@ colors.forEach(element => {
       paint("#ff0000");
     } else if (e.target.className.includes("maroon")) {
       paint("#800000");
+    } else if (e.target.className.includes("green")) {
+      paint("#98fb98");
+    } else if (e.target.className.includes("blue")) {
+      paint("#0000ff");
+    } else if (e.target.className.includes("yellow")) {
+      paint("#ffff00");
+    } else if (e.target.className.includes("orange")) {
+      paint("#ffa500");
+    } else if (e.target.className.includes("white")) {
+      paint("#ffffff");
+    } else if (e.target.className.includes("black")) {
+      paint("#000000");
+    } else if (e.target.className.includes("skin")) {
+      paint("#ffe0bd");
+    } else if (e.target.className.includes("pink")) {
+      paint("#ffc0cb");
+    } else if (e.target.className.includes("crimson")) {
+      paint("#dc143c");
+    } else if (e.target.className.includes("cyan")) {
+      paint("#00ffff");
     }
   });
 });
