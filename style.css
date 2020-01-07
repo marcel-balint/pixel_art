@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
+
+.container {
+  position: relative;
+  margin-top: 90px;
+}
+
+.box {
+  position: static;
+  max-width: 660px;
+  height: 580px;
+  display: grid;
+  border: 10px solid rgb(13, 216, 214);
+  border-radius: 9px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Signika", sans-serif;
+  margin-top: 60px;
+  text-align: center;
+  color: rgb(13, 216, 214);
+}
