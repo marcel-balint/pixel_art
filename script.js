@@ -1,4 +1,6 @@
 let colors = document.querySelectorAll(".color");
+let download = document.querySelector(".image-download");
+let close = document.querySelector(".close");
 
 createGrid();
 
@@ -8,11 +10,7 @@ function createGrid(val = 16) {
   for (let i = 0; i < val * val; i++) {
     let square = document.createElement("div");
     square.classList.add("content");
-    square.setAttribute(
-      "style",
-      "background-color: #fff",
-      "border: 1px solid #000"
-    );
+    square.setAttribute("style", "background-color: #fff");
     container.appendChild(square);
     container.setAttribute(
       "style",
@@ -59,14 +57,31 @@ colors.forEach(element => {
   });
 });
 
-let download = document.querySelector(".image-download");
-
 download.addEventListener("click", () => {
   let selector = document.getElementById("select");
   let value = selector[selector.selectedIndex].value;
   let show = document.querySelector(".img-format");
+  let download = document.querySelector(".image-download");
+
   show.style.display = "block";
   if (value) {
     downloadImage(value);
+    selector.selectedIndex = 0;
+    download.classList.remove("shadow");
+    show.style.display = "none";
   }
 });
+
+close.addEventListener("click", () => {
+  let selector = document.getElementById("select");
+  let show = document.querySelector(".img-format");
+  let download = document.querySelector(".image-download");
+  download.classList.remove("shadow");
+  selector.selectedIndex = 0;
+  show.style.display = "none";
+});
+
+function addShadow() {
+  let download = document.querySelector(".image-download");
+  download.classList.add("shadow");
+}
