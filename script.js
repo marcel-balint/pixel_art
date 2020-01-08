@@ -1,6 +1,9 @@
 let colors = document.querySelectorAll(".color");
 let download = document.querySelector(".image-download");
 let close = document.querySelector(".close");
+let gridEight = document.querySelector(".grid8");
+let gridTwelve = document.querySelector(".grid12");
+let gridThirtyTwo = document.querySelector(".grid32");
 
 createGrid();
 
@@ -25,6 +28,11 @@ function paint(color) {
       content.setAttribute("style", `background-color: ${color}`);
     };
   });
+}
+
+function addShadow() {
+  let download = document.querySelector(".image-download");
+  download.classList.add("shadow");
 }
 
 colors.forEach(element => {
@@ -81,7 +89,8 @@ close.addEventListener("click", () => {
   show.style.display = "none";
 });
 
-function addShadow() {
-  let download = document.querySelector(".image-download");
-  download.classList.add("shadow");
-}
+gridEight.addEventListener("click", e => {
+  let container = document.querySelector(".box");
+  container.innerHTML = "";
+  createGrid(e.target.dataset.value);
+});
