@@ -1,9 +1,7 @@
 let colors = document.querySelectorAll(".color");
 let download = document.querySelector(".image-download");
 let close = document.querySelector(".close");
-let gridEight = document.querySelector(".grid8");
-let gridTwelve = document.querySelector(".grid12");
-let gridThirtyTwo = document.querySelector(".grid32");
+let gridBtns = document.querySelector(".grid-size-btns");
 
 createGrid();
 
@@ -89,8 +87,16 @@ close.addEventListener("click", () => {
   show.style.display = "none";
 });
 
-gridEight.addEventListener("click", e => {
+gridBtns.addEventListener("click", e => {
   let container = document.querySelector(".box");
-  container.innerHTML = "";
-  createGrid(e.target.dataset.value);
+  if (e.target.dataset.value === "8") {
+    container.innerHTML = "";
+    createGrid(8);
+  } else if (e.target.dataset.value === "12") {
+    container.innerHTML = "";
+    createGrid(12);
+  } else if (e.target.dataset.value === "32") {
+    container.innerHTML = "";
+    createGrid(32);
+  }
 });
