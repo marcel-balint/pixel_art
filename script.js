@@ -95,6 +95,9 @@ gridBtns.addEventListener("click", e => {
   } else if (e.target.dataset.value === "12") {
     container.innerHTML = "";
     createGrid(12);
+  } else if (e.target.dataset.value === "16") {
+    container.innerHTML = "";
+    createGrid(16);
   } else if (e.target.dataset.value === "32") {
     container.innerHTML = "";
     createGrid(32);
