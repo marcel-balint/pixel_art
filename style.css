@@ -51,7 +51,6 @@ span {
 /*-----------image download------------*/
 button {
   background-color: #7096a7;
-  width: 70px;
   text-transform: uppercase;
   font-size: 14px;
   color: #fff;
@@ -74,6 +73,10 @@ button:focus {
 
 .grid-size-btns {
   text-align: center;
+}
+
+.grid-size-btns button {
+  width: 70px;
 }
 
 .grid-para {

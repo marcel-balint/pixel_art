@@ -5,7 +5,7 @@ let gridBtns = document.querySelector(".grid-size-btns");
 
 createGrid();
 
-function createGrid(val = 16) {
+function createGrid(val = 8) {
   let container = document.querySelector(".box");
 
   for (let i = 0; i < val * val; i++) {
