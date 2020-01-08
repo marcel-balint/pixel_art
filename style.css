@@ -192,16 +192,16 @@ p {
   box-shadow: -1px 3px 17px -3px rgba(0, 0, 0, 0.7);
 }
 
-@media (max-width: 672px) {
-  .colors {
-    margin-bottom: 5px;
-  }
-}
-
 @media (max-width: 710px) {
   .box {
     max-width: 500px;
     height: 500px;
+  }
+}
+
+@media (max-width: 672px) {
+  .colors {
+    margin-bottom: 5px;
   }
 }
 

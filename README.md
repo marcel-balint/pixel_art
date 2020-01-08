@@ -2,7 +2,7 @@
 
 This is an app where users can draw with the ability to choose colors from a pallet.
 
-Live demo:
+Live demo: https://marcel-balint.github.io/pixel_art/
 
 ## Features
 
